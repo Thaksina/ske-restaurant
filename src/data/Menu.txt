@@ -1,0 +1,8 @@
++++++++++++++++++ Welcome to Ske-Restaurant ++++++++++++++++++++
++ This files will add more Menu from what you write down below +
++ write down menu/price +
+Pancake/50
+LavaCake/99
+Toast/59
+Chips/69
+Hot-Tea/59
