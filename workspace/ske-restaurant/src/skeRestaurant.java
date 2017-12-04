@@ -5,21 +5,14 @@ import java.util.Scanner;
 public class skeRestaurant {
 	static Scanner Scan = new Scanner(System.in);
 	static double sum = 0;
-
+	
 	public static void main(String[] args) throws IOException {
-
 		RestaurantManager.Menufiles();
-
 		ArrayList<String> a = RestaurantManager.keeper;
-//		System.out.println(a);
 		RestaurantManager.getMenuitems();
 		RestaurantManager.getPrices();
 		RestaurantManager.getQty();
-//		System.out.println(RestaurantManager.menuName[0]);
-//		System.out.println(RestaurantManager.price[0]);
-//		System.out.println();
 		printMenu();
-
 	}
 
 	public static void printMenu() {
@@ -33,8 +26,8 @@ public class skeRestaurant {
 		System.out.println("[m] Open Menu");
 		System.out.println("[p] Print Order");
 		System.out.println("[x] Exit");
-
 		command();
+		
 	}
 
 	public static void command() {
@@ -42,7 +35,6 @@ public class skeRestaurant {
 			System.out.println();
 			System.out.print("Enter your Choice : ");
 			String command = Scan.next();
-
 			switch (command) {
 			case "p":
 				printOrder();
@@ -72,9 +64,8 @@ public class skeRestaurant {
 			int Qty = Scan.nextInt();
 			RestaurantManager.qty[command2] = Qty;
 		}
-
 	}
-
+	
 	public static void printOrder() {
 		System.out.println("+========== Order =============+=== QTY ===+=== Total ===+");
 
@@ -87,10 +78,8 @@ public class skeRestaurant {
 				// System.out.printf("%.2f
 				// %n",RestaurantManager.price[i]*RestaurantManager.qty[i]);
 			}
-
 		}
 		System.out.println("+==============================+===========+=============+");
-
 	}
 
 	public static boolean exitPrograme() {
@@ -117,7 +106,9 @@ public class skeRestaurant {
 		System.out.println("\nYour total is : " + sum);
 		System.out.print("Enter your money : ");
 		double money = Scan.nextDouble();
-
 		System.out.printf("%nYour Change is : %.2f%n%n", money - sum);
 	}
+	
+	
+	
 }
