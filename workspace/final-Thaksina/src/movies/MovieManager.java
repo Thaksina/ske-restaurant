@@ -16,6 +16,7 @@ public class MovieManager {
 		// empty
 	}
 
+	
 	public int readMovies(String filename) {
 		ClassLoader classloader = Movie.class.getClassLoader();
 		InputStream inputstream = classloader.getResourceAsStream(filename);
@@ -32,6 +33,8 @@ public class MovieManager {
 		return countmovie;
 	}
 
+	
+	
 	public String getMovie(int movieId) {
 		for(int i = 0 ; i <movies.size();i++){
 			this.id=movieId;
